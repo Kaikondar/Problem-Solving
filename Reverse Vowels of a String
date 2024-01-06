@@ -1,0 +1,31 @@
+Question : https://leetcode.com/problems/reverse-vowels-of-a-string/
+class Solution {
+    public String reverseVowels(String s) {
+        char[]arr=new char[s.length()];
+        String vow="";
+        String ans="";
+        int j=0;
+        String res="";
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='a'||s.charAt(i)=='e'||s.charAt(i)=='i'||s.charAt(i)=='o'||s.charAt(i)=='u'||s.charAt(i)=='A'||s.charAt(i)=='E'||s.charAt(i)=='I'||s.charAt(i)=='O'||s.charAt(i)=='U'){
+              
+                    res+=s.charAt(i);
+                }
+            }
+  
+        
+       int k=res.length()-1;
+        for(int i=0;i<s.length();i++){
+           if(s.charAt(i)=='a'||s.charAt(i)=='e'||s.charAt(i)=='i'||s.charAt(i)=='o'||s.charAt(i)=='u'||s.charAt(i)=='A'||s.charAt(i)=='E'||s.charAt(i)=='I'||s.charAt(i)=='O'||s.charAt(i)=='U'){
+               
+              ans+=res.charAt(k);
+               k--;
+        }
+            else{
+                ans+=s.charAt(i);
+            }
+        }
+        return ans;
+        
+    }
+}
